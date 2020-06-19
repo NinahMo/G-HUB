@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "G-HUB"
+    }
+  },
+  "defaultProject": "G-HUB",
+  "cli": {
+    "analytics": "f3a78438-7021-4ff1-8e88-bad459acb6e5"
+  }
 }
