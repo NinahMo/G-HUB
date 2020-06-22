@@ -10,10 +10,9 @@
                    <div class="mask">
                        <div class="text-center">
                           <div class="col-4 offset-4 ">
-                           <h1>Search for your Github Username<i class="fab fa-github"></i></h1>
-                           <h3 class="">Type in</h3>
+                           <h1>Search Github Username<i class="fab fa-github"></i></h1>  
                            <form class="form-inline d-flex justify-content-center md-form form-sm active-cyan-2 mt-2">
-                            <input class="form-control form-control-sm mr-3 w-75" type="text" placeholder="GitHub Name" name="username"
+                            <input class="form-control form-control-sm mr-3 w-75" id="Ninah" type="text" placeholder="GitHub Name" name="username"
                             [(ngModel)]="username" (keyup)="search()">
                             <i class="fas fa-search" aria-hidden="true"></i>
                           </form>
@@ -27,23 +26,6 @@
        </div>
     </div>
 
-    <div class="container-fluid">
-        <section class="mt-4">
-          <div class="row">
-            <div class="col-md-5 mb-4">
-  <div class="card">
-      <div class="card-body">
-        <h3 class="card-title"><p>Username {{user.login}}</p></h3>
-        <hr>
-        <ul class=" card-text list-group list-group-flush">
-            <li class="list-group-item animated"><i class="fas fa-users f0c0"></i>Followers:<i class="fas fa-arrow-circle-right"></i> {{user.followers}}</li>
-            <li class="list-group-item animated"><i class="fas fa-user-friends"></i>Following:<i class="fas fa-arrow-circle-right"></i> {{user.following}}</li>
-            <li class="list-group-item animated"><i class="fas fa-folder-open"></i> No of public repositories: <i class="fas fa-arrow-circle-right"></i>{{user.public_repos}}</li>
-            <li class="list-group-item animated"><i class="far fa-clock pr-1"></i> Joined on: <i class="fas fa-arrow-circle-right"></i>{{user.created_at|date}}</li>
-          </ul>
-      </div>
-    </div>
-  </div>
 
 
 
@@ -53,7 +35,7 @@
     <H1 class="git">Github search</H1>
     <img src="https://bit.ly/3468s5Q" alt="">
     <div class="row">
-        <div class="col-md-8">
+        <div class="col-md-4">
             <form>
                 <div class="form-group search">
                     <input type="text" class="form-control" placeholder="Github Name" name="username"
@@ -66,9 +48,6 @@
 
     <div *ngIf="user">
         <div class="panel panel-default">
-            <div class="panel-heading">
-                <h3 class="panel-title">{{user.name}}</h3>
-            </div>
             <div class="panel-body">
                 <div class="row">
                     <div class="col-md-4">
@@ -77,10 +56,10 @@
                     </div>
                     <div class="col-md-8">
 
-                        <span class="btn btn-success">{{user.public_repos}} Public Repositories
+                        <span class="btn btn-indigo">{{user.public_repos}} Public Repositories
                         </span>
-                        <span class="btn btn-warning">{{user.followers}} Followers</span>&nbsp;
-                        <span class="btn btn-danger">Following{{user.following}}</span>
+                        <span class="btn btn-pink">{{user.followers}} Followers</span>&nbsp;
+                        <span class="btn btn-pink">Following{{user.following}}</span>
 
                         <br>
                         <ul class="list-group">
@@ -94,9 +73,6 @@
             </div>
         </div>
         <div class="panel panel-default bg-white">
-            <div class="panel-heading">
-                <h2 class="panel-title">Repositories</h2>
-            </div>
             <div class="panel-body">
                 <div *ngFor="let repository of repository">
                     <div class="row">

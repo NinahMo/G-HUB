@@ -7,7 +7,7 @@ Ninah Mosoti
 It is an Angular application that enables the user to acquire information on public repositories once they have keyed in Github usernames.
 
 ## Live Link
-
+https://ninahmo.github.io/G-HUB/
 
 ## Setup/Installation instructions
 - git clone the repository

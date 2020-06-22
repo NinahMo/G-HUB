@@ -10,7 +10,6 @@ import { map } from 'rxjs/operators';
 
 export class UserService {
     private username:string;
-    apiKey=environment.apikey;
     private url = 'https://api.github.com/users/';
 
     constructor(private http:HttpClient){
