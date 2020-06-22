@@ -10,7 +10,9 @@ It is an Angular application that enables the user to acquire information on pub
 
 
 ## Setup/Installation instructions
-
+- git clone the repository
+- open it with your preferrable text editor code . or atom .
+-run ng serve for the local host 
 
 ## Technologies Used
 - HTML
