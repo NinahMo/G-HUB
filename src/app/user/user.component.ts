@@ -19,7 +19,7 @@ export class UserComponent implements OnInit {
 
   ngOnInit(){}
 
-  search(){
+  search(){    
       this.userservice.changeUserNames(this.username);
         this.userservice.getUser().subscribe(user => {
           this.user = user;
