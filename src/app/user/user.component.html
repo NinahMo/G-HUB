@@ -1,0 +1,103 @@
+<div id="video-carousel-example2" class="carousel slide carousel-fade" data-ride="carousel">
+    <div class="carousel-inner" role="listbox">
+       <div class="carousel-item active">
+           <div class="view  rgba-black-strong">
+                <video class="video-fluid" autoplay loop muted>
+                    <source src="https://mdbootstrap.com/img/video/forest.mp4" type="video/mp4" />
+                </video>
+      
+                   <div class="mask">
+                       <div class="text-center">
+                          <div class="col-4 offset-4 ">
+                           <h1>Search for your Github Username<i class="fab fa-github"></i></h1>
+                           <h3 class="">Type in</h3>
+                           <form class="form-inline d-flex justify-content-center md-form form-sm active-cyan-2 mt-2">
+                            <input class="form-control form-control-sm mr-3 w-75" type="text" placeholder="GitHub Name" name="username"
+                            [(ngModel)]="username" (keyup)="search()">
+                            <i class="fas fa-search" aria-hidden="true"></i>
+                          </form>
+                         </div>
+                      </div>
+                       <div class="text-center">
+                         <button type="button" class="btn btn-lg btn-elegant"><a href="{{user.html_url}}" target="_blank">Show on github</a></button>
+                        </div>
+           </div>
+        </div>
+       </div>
+    </div>
+
+
+
+
+
+
+
+<div class="container">
+    <H1 class="git">Github search</H1>
+    <img src="https://bit.ly/3468s5Q" alt="">
+    <div class="row">
+        <div class="col-md-8">
+            <form>
+                <div class="form-group search">
+                    <input type="text" class="form-control" placeholder="Github Name" name="username"
+                        [(ngModel)]="username" (keyup)="search()">
+                </div>
+
+            </form>
+        </div>
+    </div>
+
+    <div *ngIf="user">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">{{user.name}}</h3>
+            </div>
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-md-4">
+                        <img src="{{user.avatar_url}}" class="img-thumbnail github-avatar" alt="Avi"><br>
+                        <br>
+                    </div>
+                    <div class="col-md-8">
+
+                        <span class="btn btn-success">{{user.public_repos}} Public Repositories
+                        </span>
+                        <span class="btn btn-warning">{{user.followers}} Followers</span>&nbsp;
+                        <span class="btn btn-danger">Following{{user.following}}</span>
+
+                        <br>
+                        <ul class="list-group">
+                            <li class="list-group-item"><strong> User Name: <a href="{{user.html_url}}"
+                                        target="_blank">{{user.login}}</a></strong></li>
+
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default bg-white">
+            <div class="panel-heading">
+                <h2 class="panel-title">Repositories</h2>
+            </div>
+            <div class="panel-body">
+                <div *ngFor="let repository of repository">
+                    <div class="row">
+                        <div class="col-md-8">
+                            <h4><a target="_blank" href="{{repository.html_url}}">{{repository.name}}</a></h4>
+                            <p>{{repository.description}}</p>
+                        </div>
+                        <div class="card-body">
+                        <div class="col-md-2">
+                            <p>Updated on:{{repository.created_at|date}}</p>
+                        </div>
+                        </div>
+                    </div>
+                    <hr />
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</div>

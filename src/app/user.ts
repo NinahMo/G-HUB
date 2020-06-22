@@ -1,6 +1,8 @@
 export class User {
-    
-    constructor(){
+    name: string;
+    avatar: string;
+    followers: number;
+    following: number;
+    public_repos=[];    
 
-    }
 }
