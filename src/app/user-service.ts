@@ -22,7 +22,7 @@ export class UserService {
         return this.http.get(this.url + this.username).pipe(map(resolve => resolve))
 
     }
-
+   
     getRepo(){
 
         return this.http.get(this.url + this.username + '/repos').pipe(map(resolve => resolve));
