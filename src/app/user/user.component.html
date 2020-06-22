@@ -5,6 +5,7 @@
                 <video class="video-fluid" autoplay loop muted>
                     <source src="https://mdbootstrap.com/img/video/forest.mp4" type="video/mp4" />
                 </video>
+
       
                    <div class="mask">
                        <div class="text-center">
@@ -26,7 +27,23 @@
        </div>
     </div>
 
-
+    <div class="container-fluid">
+        <section class="mt-4">
+          <div class="row">
+            <div class="col-md-5 mb-4">
+  <div class="card">
+      <div class="card-body">
+        <h3 class="card-title"><p>Username {{user.login}}</p></h3>
+        <hr>
+        <ul class=" card-text list-group list-group-flush">
+            <li class="list-group-item animated"><i class="fas fa-users f0c0"></i>Followers:<i class="fas fa-arrow-circle-right"></i> {{user.followers}}</li>
+            <li class="list-group-item animated"><i class="fas fa-user-friends"></i>Following:<i class="fas fa-arrow-circle-right"></i> {{user.following}}</li>
+            <li class="list-group-item animated"><i class="fas fa-folder-open"></i> No of public repositories: <i class="fas fa-arrow-circle-right"></i>{{user.public_repos}}</li>
+            <li class="list-group-item animated"><i class="far fa-clock pr-1"></i> Joined on: <i class="fas fa-arrow-circle-right"></i>{{user.created_at|date}}</li>
+          </ul>
+      </div>
+    </div>
+  </div>
 
 
 
@@ -101,3 +118,5 @@
 
     </div>
 </div>
+
+
